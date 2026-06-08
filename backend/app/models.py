@@ -1,5 +1,5 @@
-from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import DeclarativeBase
 
 
 class Base(DeclarativeBase):
@@ -14,4 +14,5 @@ class Job(Base):
     title = Column(String)
     company = Column(String)
     location = Column(String)
+    source = Column(String)
     url = Column(String, unique=True)

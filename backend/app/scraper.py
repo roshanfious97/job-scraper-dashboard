@@ -32,6 +32,7 @@ def scrape_jobs():
             title = job.get("position", "N/A")
             company = job.get("company", "N/A")
             location = job.get("location", "Remote")
+            source = "RemoteOK"
             url = job.get("url")
 
             if not url:
@@ -47,6 +48,7 @@ def scrape_jobs():
                             title,
                             company,
                             location,
+                            source,
                             url
                         )
                         VALUES
@@ -54,6 +56,7 @@ def scrape_jobs():
                             :title,
                             :company,
                             :location,
+                            :source,
                             :url
                         )
                         ON CONFLICT (url)
@@ -64,6 +67,7 @@ def scrape_jobs():
                         "title": title,
                         "company": company,
                         "location": location,
+                        "source": source,
                         "url": url
                     }
                 )
