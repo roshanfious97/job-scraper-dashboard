@@ -1,0 +1,97 @@
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.search-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.job-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.job-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.job-company {
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.job-location {
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.job-source {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.apply-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #16a34a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
