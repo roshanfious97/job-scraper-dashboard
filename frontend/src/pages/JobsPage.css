@@ -95,3 +95,30 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
+.job-count {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.scrape-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.scrape-btn:hover {
+  opacity: 0.9;
+}
+
+.source-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}

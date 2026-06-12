@@ -3,7 +3,7 @@ from sqlalchemy import text
 import requests
 
 
-def scrape_jobs():
+def scrape_remoteok():
 
     print("Fetching jobs from RemoteOK...")
 
@@ -87,6 +87,6 @@ def scrape_jobs():
 
 if __name__ == "__main__":
 
-    count = scrape_jobs()
+    count = ( scrape_remoteok)
 
     print(f"{count} jobs scraped successfully!")

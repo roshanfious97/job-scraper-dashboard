@@ -2,9 +2,9 @@ from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
+from app.scrapers import scrape_all_jobs
 from app.database import engine
 from app.models import Base
-from app.scraper import scrape_jobs
 
 Base.metadata.create_all(bind=engine)
 
@@ -166,12 +166,35 @@ def get_jobs(
             "total": total,
             "jobs": jobs
         }
+    
+
+@app.get("/sources")
+def get_sources():
+
+    with engine.connect() as conn:
+
+        result = conn.execute(
+            text(
+                """
+                SELECT DISTINCT source
+                FROM jobs
+                ORDER BY source
+                """
+            )
+        )
+
+        sources = []
+
+        for row in result:
+            sources.append(row.source)
+
+        return sources
 
 
-@app.post("/scrape")
-def scrape():
+@app.post("/scrape-all")
+def scrape_all():
 
-    count = scrape_jobs()
+    count = scrape_all_jobs()
 
     return {
         "message": f"{count} jobs scraped"
